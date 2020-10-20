@@ -74,7 +74,7 @@ function levelMax (){
 
 class Game {
     constructor(){
-        swal('Informacion', "recuerda esperar la alerta ( ! ) antes de que empieces a seguir la secuencia", 'warning', {
+        swal('Informacion', "recuerda esperar la alerta ( ! ) antes de que empieces a seguir la secuencia, la secuencia ira iluminandose a continuacion.", 'warning', {
             button: 'Entendido'
         })
          .then( () => {
