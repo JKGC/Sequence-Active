@@ -1,0 +1,195 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    color: white;
+    background: black;
+}
+
+header {
+    width: 98%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header div {
+    display: inherit;
+}
+.character, .levelMax, .levelUp {
+    margin: 1rem 0;
+}
+h2 {
+    font-size: 2.2rem;
+}
+h1 {
+    font-size: 8rem;
+}
+.levelUp{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.levelUp.levelColumn {
+    flex-direction: column-reverse;
+}
+.levelColumn h2:last-child {
+    margin-bottom: 1rem;
+}
+.levelUp h2:last-child, .character h2:last-child, .levelMax h2:last-child {
+    margin-left: 1rem;
+    text-transform: uppercase;
+}
+
+main section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.boxes {
+    margin: 0 5%;
+    margin-bottom: 5%;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(15rem, 35rem));
+    grid-template-rows: 26rem 8rem 26rem;
+    grid-template-areas: "box-green box-blue"
+                         "btn btn"
+                         "box-orange box-magenta";
+}
+.color {
+    width: 98%;
+    height: 98%;
+    border-radius: 1rem;
+}
+.green {
+    border-top-left-radius: 100%;
+    grid-area: box-green;
+    background: #2A9D8F;
+}
+.green.light {
+    background: #00ffe0;
+}
+
+.blue {
+    border-top-right-radius: 100%;
+    grid-area: box-blue;
+    background: #1a4bb9;
+}
+.blue.light {
+    background: #4780ff;
+}
+
+.orange {
+    border-bottom-left-radius: 100%;
+    grid-area: box-orange;
+    background: #d86b15;
+}
+.orange.light {
+    background: #fb984b;
+}
+
+.magenta {
+    border-bottom-right-radius: 100%;
+    grid-area: box-magenta;
+    background: #bf1069;
+}
+.magenta.light {
+    background: #f53c9a;
+}
+.green:hover, .blue:hover, .orange:hover, .magenta:hover{
+    width: 96%;
+    height: 94%;
+}
+.btn-start {
+    border: none;
+    border-radius: 2rem;
+    grid-area: btn;
+    width: 100%;
+    height: 100%;
+    outline: none;
+}
+.newGame {
+    border: 0.1rem solid white;
+    padding: 1rem;
+    border-radius: 1rem;
+    background: none;
+    color: white;
+    outline: none;
+}
+.newGame:hover {
+    background: white;
+    color: black;
+}
+footer nav{
+    height: 8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+.hide {
+    display: none;
+}
+
+.by {
+    font-size: 2rem;
+    font-weight: 600;
+}
+/* trnasition */
+
+.boxes.ongame {
+    grid-template-rows: repeat(2, 30rem);
+    grid-template-areas: "box-green box-blue"
+                         "box-orange box-magenta";
+    transition-property: all;
+    transition-duration: 0.2s;
+    transition-timing-function: linear;
+}
+/* trnasition end*/
+
+
+@media (max-width: 609px) {
+    h1 {
+        font-size: 7rem;
+    }
+    .boxes {
+        grid-template-rows: 22rem 6rem 22rem;
+    }
+    .boxes.ongame {
+        grid-template-rows: repeat(2, 25rem);
+    }
+}
+@media (max-width: 505px) {
+    h1 {
+        font-size: 6rem;
+    }
+    .boxes {
+        grid-template-rows: 18rem 6rem 18rem;
+    }
+    .boxes.ongame {
+        grid-template-rows: repeat(2, 21rem);
+    }
+}
+@media (max-width: 415px) {
+    h1 {
+        font-size: 4.5rem;
+    }
+    .boxes {
+        grid-template-rows: 15rem 5rem 15rem;
+    }
+    .boxes.ongame {
+        grid-template-rows: repeat(2, 17.5rem);
+    }
+}
+
+

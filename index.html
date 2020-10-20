@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SequenceActive</title>
+    <link rel="icon" sizes="192x192" href="/image/icon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/main.css">
+  </head>
+  <body>
+    
+    <header>
+      <div class="character">
+        <h2>Jugador : </h2>
+        <h2></h2>
+      </div>
+      <h1>SequenceActive</h1>
+      <div class="levelMax">
+        <h2>El nivel maximo elegio es: </h2>
+        <h2></h2>
+      </div>
+      <div class="levelUp">
+        <h2>Tu Nivel Actual es:</h2>
+        <h2></h2>
+      </div>
+    </header>
+    <main>
+      <section>
+        <section class="boxes">
+          <div id="green" class="color green" data-color="green" ></div>
+          <div id="blue" class="color blue" data-color="blue"></div>
+          <div id="orange" class="color orange" data-color="orange"></div>
+          <div id="magenta" class="color magenta" data-color="magenta"></div>
+          <button id="btnEmpezar" class="btn-start" onclick="empezarJuego()">Empezar a jugar!</button>
+        </section>
+        <button class="newGame" onclick="location.reload()">Empezar un Nuevo Juego</button>
+      </section>
+    </main>
+    <footer>
+      <nav>
+        <a href="https://github.com/JKGC" class="by">Created by JaonstCode</a>
+      </nav>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="/js/main.js"></script>
+  </body>
+</html>
