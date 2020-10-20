@@ -43,7 +43,7 @@ h1 {
 }
 .levelUp h2:last-child, .character h2:last-child, .levelMax h2:last-child {
     margin-left: 1rem;
-    text-transform: uppercase;
+    text-transform: capitalize;
 }
 
 main section{
